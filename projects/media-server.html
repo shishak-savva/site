@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/icon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media WeeBee сервер</title>
+  <link rel="stylesheet" href="/assets/style.scss">
+</head>
+<body class="project">
+  <div class="head" id="links-btn">
+    <img class="head__icon" src="/assets/icon.jpg">
+    <div class="head__btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <dic class="head__links" id="links-list">
+      <a href="/" class="head__link" to="contacts">
+        Главная
+        <div class="head__link-underline"></div>
+      </a>
+    </dic>
+  </div>
+  <main class="container">
+    <div class="project__title">
+      Media WeeBee сервер
+    </div>
+  
+    <div class="project__images">
+      <a class="project__image" data-gall="gallery01" href="/assets/media-server.PNG">
+        <img src="/assets/media-server.PNG">
+      </a>
+    </div>
+    <p>
+      С помощью данного сервера, можно встроить видеосвязь на любой сайт.
+      Данный сервер расчитан на большое количество пользователей.
+      Он использует библиотеку Mediasoup, поэтому работает по архитектуре SFU, что обеспечивает бесперебойную работу при большом количестве подключений на сервер.
+    </p>
+    <p>
+      Если перейти к конкретике, с таким сервером,
+      1 ядро машины может спокойно обрабатывать 400-500 точек получения видеосвязи.
+      В данном сервере уже реализована многоядерная архитектура передачи трансляций.
+      Мало того, на данном сервере реализована многохостинговая архитектура.
+      Что позволяет ядрам с разных машин обмениваться трансляциями.
+      Поэтому одну комнату могут обслуживать сразу несколько машин и 1 машина может обслуживать несколько комнат.
+    </p>
+    <p>
+      Сама связь проходит по двум протоколам: RTP и WebRTC.
+      Помимо трансляций из браузера,
+      сервис позволяет подключать к конференции трансляции из других источников, например:
+      файловая система, SIP телефония, TV телевидение и прочие источники поддерживающие RTP протокол.
+    </p>
+    <p>
+      У него есть встроенная система защиты на уровне API,
+      позволяющая в пределах комнаты каждому пользователю получать только те видео треки,
+      на которые у него есть разрешения.
+      А также, под контролем управляющего сервиса, позволяет входить в комнату в режиме невидимки.
+    </p>
+    <p>
+      Технологии:
+      <ul>
+        <li>Typescript</li>
+        <li>Koa.js</li>
+        <li>Mediasoup</li>
+        <li>Socket.io</li>
+        <li>Winston</li>
+        <li>Jsonwebtoken</li>
+        <li>Axios</li>
+      </ul>
+      Клиентская библиотека:
+      <ul>
+        <li>Npm (сделал из этого npm пакет)</li>
+        <li>Typescript</li>
+        <li>React</li>
+        <li>Socket.io client</li>
+        <li>Mediasoup client</li>
+      </ul>
+    </p>
+  </main>
+  <script type="module" src="/assets/project.js"></script>
+</body>
+</html>

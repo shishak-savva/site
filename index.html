@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Савва - Fullstack разработчик</title>
-    <link rel="stylesheet" href="./style.scss">
+    <link rel="stylesheet" href="./assets/style.scss">
   </head>
   <body class="container">
     <div class="head" id="links-btn">
@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div class="skills">
+    <div class="skills skills_closed" id="skills">
       <div class="skills__title" id="skills">
         Мои навыки
       </div>
@@ -253,6 +253,12 @@
             Telegram Боты
           </div>
         </div>
+        <div class="skills__toggle skills__toggle_open" id="skills__toggle_open">
+          Развернуть
+        </div>
+        <div class="skills__toggle skills__toggle_close" id="skills__toggle_close">
+          Свернуть
+        </div>
       </div>
     </div>
 
@@ -262,40 +268,40 @@
       </div>
       <div class="projects__cards">
 
-        <div class="projects__card">
+        <a href="/projects/vbc" class="projects__card">
           <img src="./assets/weebee-vbc.PNG" alt="">
           <div class="projects__name">
-            Система видео бизнес консультаций
+            Платформа видео бизнес консультаций
           </div>
-        </div>
+        </a>
         
-        <div class="projects__card">
+        <a href="/projects/conference" class="projects__card">
           <img src="./assets/conference.PNG" alt="">
           <div class="projects__name">
-            WeeBee конференция <br >(с подключением телефонии)
+            WeeBee конференция <br >
           </div>
-        </div>
+        </a>
 
-        <div class="projects__card">
+        <a href="/projects/media-server" class="projects__card">
           <img src="./assets/media-server.PNG" alt="">
           <div class="projects__name">
-            Масштабируемый медиа сервер для видео связи (WeeBee)
+            Медиа сервер для видео связи (WeeBee)
           </div>
-        </div>
+        </a>
 
-        <div class="projects__card">
+        <a href="/projects/operator-aerofloat" class="projects__card">
           <img src="./assets/airflot-operator.jpg" alt="">
           <div class="projects__name">
             Оператор электронной очереди для Аэрофлота
           </div>
-        </div>
+        </a>
 
-        <div class="projects__card">
+        <a href="/projects/ads-sync.html" class="projects__card">
           <img src="./assets/ads.jpg" alt="">
           <div class="projects__name">
             Сервер синхронизации рекламы, бегущих строк и новостей
           </div>
-        </div>
+        </a>
 
         <div class="projects__card">
           <img src="./assets/admin_admin.jpg" alt="">
@@ -307,7 +313,7 @@
         <div class="projects__card">
           <img src="./assets/inter_academy.PNG" alt="">
           <div class="projects__name">
-            Приложение "Зимняя академия" для Российского Института Современного Арбитража 
+            Приложение "Зимняя академия" 
           </div>
         </div>
 
@@ -430,6 +436,6 @@
         Могу читать техническую документацию
       </div>
     </div>
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./assets/main.js"></script>
   </body>
 </html>

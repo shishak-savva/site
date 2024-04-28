@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/icon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервер синхронизации рекламы, бегущих строк и новостей</title>
+  <link rel="stylesheet" href="/assets/style.scss">
+</head>
+<body class="project">
+  <div class="head" id="links-btn">
+    <img class="head__icon" src="/assets/icon.jpg">
+    <div class="head__btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <dic class="head__links" id="links-list">
+      <a href="/" class="head__link" to="contacts">
+        Главная
+        <div class="head__link-underline"></div>
+      </a>
+    </dic>
+  </div>
+  <main class="container">
+    <div class="project__title">
+      Сервер синхронизации рекламы, бегущих строк и новостей
+    </div>
+  
+    <div class="project__images">
+      <a class="project__image" data-gall="gallery01" href="/assets/ads.jpg">
+        <img src="/assets/ads.jpg">
+      </a>
+    </div>
+    
+    <p>
+      Это сервер, который позволяет синхронизировать вопросизведение рекламы на нескольких устройствах.
+      Он по очереди рассылает на устройства сигналы для смены рекламного ролика и позволяет менять очередь прямо на ходу.
+      Данный сервер кэширует файлы для рекламы и рассылает их на устройства.
+    </p>
+
+    <p>
+      Технологии (сервер):
+      <ul>
+        <li>Go lang</li>
+        <li>GRPC</li>
+        <li>Gorilla Websocket</li>
+      </ul>
+      Клиентская библиотека:
+      <ul>
+        <li>Typescript</li>
+        <li>Npm (сделал из этого npm пакет)</li>
+        <li>React</li>
+        <li>Websocket</li>
+      </ul>
+    </p>
+  </main>
+  <script type="module" src="/assets/project.js"></script>
+</body>
+</html>

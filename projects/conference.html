@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/icon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeeBee Конференция</title>
+  <link rel="stylesheet" href="/assets/style.scss">
+</head>
+<body class="project">
+  <div class="head" id="links-btn">
+    <img class="head__icon" src="/assets/icon.jpg">
+    <div class="head__btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <dic class="head__links" id="links-list">
+      <a href="/" class="head__link" to="contacts">
+        Главная
+        <div class="head__link-underline"></div>
+      </a>
+    </dic>
+  </div>
+  <main class="container">
+    <div class="project__title">
+      WeeBee Конференция
+    </div>
+  
+    <div class="project__images">
+      <a class="project__image" data-gall="gallery01" href="/assets/conference.PNG">
+        <img src="/assets/conference.PNG">
+      </a>
+    </div>
+
+    <p>
+      Данное приложение позволяет проводить видеоконференции (камера, микрофон, показ экрана) в хорошем качестве бесплатно.
+      Имеет самый обычный чат и позволяет включить интерактивную доску с презентацией (кнопка "демонстрация").
+      Сама видео свзязь работает через сервер Media WeeBee.
+    </p>
+
+    <p>
+      Помимо звонков в браузере, может принимать звонки по протокору SIP,
+      т.е. можно попасть в комнату и общаться с её участниками просто <b>ПОЗВОНИВ ПО ТЕЛЕФОНУ</b> горячей линии "Альфаматика" с просьбой перевести звонок на номер 234
+    </p>
+
+    <p>
+      Технологии сервера:
+      <ul>
+        <li>Koa.js</li>
+        <li>Axios (Обращение к Media WeeBee)</li>
+      </ul>
+      Технологии сервера телефонии:
+      <ul>
+        <li>SIP/UDP</li>
+        <li>Socket.io client</li>
+        <li>Axios</li>
+      </ul>
+      Технологии клиента:
+      <ul>
+        <li>Typescript</li>
+        <li>Axios</li>
+        <li>React</li>
+        <li>Pullstate</li>
+        <li>React-konva</li>
+      </ul>
+    </p>
+  </main>
+  <script type="module" src="/assets/project.js"></script>
+</body>
+</html>

@@ -63,6 +63,7 @@ $color-2: #ffcf56;
   &__link {
     color: $color-1;
 
+    text-decoration: none !important;
     position: relative;
 
     cursor: pointer;
@@ -293,6 +294,8 @@ $color-2: #ffcf56;
 }
 
 .skills {
+  position: relative;
+
   &__title {
     padding: 30px;
     font-weight: 600;
@@ -303,23 +306,77 @@ $color-2: #ffcf56;
 
   &__col {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: flex-start;
     gap: 10px;
 
     width: 500px;
     max-width: 100%;
+
+    @media (max-width: 500px) {
+      gap: 2px;
+    }
   }
 
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     width: 100%;
 
     gap: 5px;
+    
+    padding-bottom: 40px;
+
+    transition: 500ms;
+
+    height: 780px;
+    overflow: hidden;
+
+    
+    @media (max-width: 500px) {
+      height: 725px;
+    }
+  }
+
+  &_closed &__list {
+    height: 250px;
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    color: $color-1;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: row;
+    overflow: hidden;
+
+    cursor: pointer;
+    height: 30px;
+    transition: 500ms;
+
+    &_open {
+      height: 0;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    }
+  }
+
+  &_closed &__toggle_open {
+    height: 150px;
+  }
+
+
+  &_closed &__toggle_close {
+    height: 0;
   }
 
   &__item {
@@ -328,6 +385,11 @@ $color-2: #ffcf56;
 
     background: #f8ede7;
     color: #131313;
+    text-wrap: nowrap;
+    
+    @media (max-width: 500px) {
+      font-size: 12px;
+    }
   }
 
   &__name {
@@ -339,6 +401,10 @@ $color-2: #ffcf56;
     background: #f8ede73e;
     color: $color-1;
   }
+}
+
+body {
+  position: relative;
 }
 
 .projects {
@@ -380,6 +446,7 @@ $color-2: #ffcf56;
 
     align-items: center;
     justify-content: center;
+    text-decoration: none !important;
 
 
     &:hover {
@@ -401,6 +468,7 @@ $color-2: #ffcf56;
     font-weight: 500;
 
     text-align: center;
+    color: #131313;
   }
 }
 
@@ -473,5 +541,75 @@ $color-2: #ffcf56;
   &__value {
     color: $color-1;
     font-size: large;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.project {
+  &__title {
+    padding-top: 20px;
+
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__images {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    
+    padding: 15px;
+    border: 1px solid $color-1;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer;
+    transition: 150ms;
+    transform: scale(0.95);
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      object-position: center;
+      border: 1px solid $color-2;
+    }
+    
+    &:hover {
+      transform: scale(1);
+    }
+  }
+
+  &__images &__image {
+    max-width: 300px;
+
+    @media (max-width: 650px) {
+      max-width: 100%;
+    }
   }
 }

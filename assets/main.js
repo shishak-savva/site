@@ -17,15 +17,14 @@ document.querySelectorAll('.head__link').forEach((element) => {
       } else {
         count++;
       }
-    }, 300 / 50);
+    }, 500 / 50);
   });
 });
 
-const btn = document.getElementById('links-btn');
 const links = document.getElementById('links-list');
 
 document.addEventListener('click', (e) => {
-  if (e.target.className?.includes('head') || e.target?.parentElement.className?.includes('head')) {
+  if (e.target.className?.includes('head') || e.target?.parentElement?.className?.includes('head')) {
     if (links.classList.contains('head__links_open')) {
       links.classList.remove('head__links_open');
     } else {
@@ -34,16 +33,12 @@ document.addEventListener('click', (e) => {
   } else {
     links.classList.remove('head__links_open');
   }
-})
+});
 
-// if (btn && links) {
-//   btn.addEventListener('click', () => {
-//     console.log('click');
+document.getElementById('skills__toggle_open').addEventListener('click', () => {
+  document.getElementById('skills').classList.remove('skills_closed');
+});
 
-//     if (links.classList.contains('head__links_open')) {
-//       links.classList.remove('head__links_open');
-//     } else {
-//       links.classList.add('head__links_open');
-//     }
-//   });
-// }
+document.getElementById('skills__toggle_close').addEventListener('click', () => {
+  document.getElementById('skills').classList.add('skills_closed');
+});
